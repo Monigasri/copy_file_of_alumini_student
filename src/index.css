@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 230 85% 58%; /* Fresh Indigo */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 30% 96%;
+    --secondary-foreground: 222 47% 11.2%;
+
+    --muted: 215 25% 94%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 230 85% 95%;
+    --accent-foreground: 230 85% 40%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 32% 91%;
+    --input: 214.3 32% 91%;
+    --ring: 230 85% 58%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 210 40% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 230 85% 58%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 230 85% 95%;
+    --sidebar-accent-foreground: 230 85% 40%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 230 85% 58%;
+
+    --success: 156 72% 38%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
