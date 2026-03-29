@@ -11,7 +11,7 @@ export default function ResetPassword() {
   const handleReset = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:3001/api/auth/reset-password", {
+    const res = await fetch("https://copy-file-of-alumini-student.onrender.com/api/auth/reset-password", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

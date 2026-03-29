@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3001/api";
+const BASE_URL = "https://copy-file-of-alumini-student.onrender.com/api";
 
 /* ================= TYPES ================= */
 
@@ -98,7 +98,7 @@ export const api = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
-    });
+    });await fetch(`${BASE_URL}/auth/forgot-password`)
 
 
 
@@ -113,7 +113,7 @@ export const api = {
   /* ================= forgrt password ================= */
   forgotPassword: async (email: string) => {
     try {
-      const res = await fetch("http://localhost:3001/api/auth/forgot-password", {
+      const res = await fetch("https://copy-file-of-alumini-student.onrender.com/api/auth/forgot-password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
