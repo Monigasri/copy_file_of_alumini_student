@@ -12,13 +12,11 @@ import messageRoutes from "./routes/messages.js";
 import "./utils/reminderJob.js";
 
 // Always load the root .env (regardless of the current working directory).
-dotenv.config({ path: new URL("../.env", import.meta.url) });
-
+dotenv.config();
 const app = express();
 
 const PORT = process.env.PORT || 3001;
-const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/appointment-details";
-
+const MONGO_URI = process.env.MONGO_URI;
 // Global middleware
 app.use(
   cors({
