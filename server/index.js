@@ -13,10 +13,12 @@ import "./utils/reminderJob.js";
 
 // Always load the root .env (regardless of the current working directory).
 dotenv.config();
+
 const app = express();
 
 const PORT = process.env.PORT || 3001;
 const MONGO_URI = process.env.MONGO_URI;
+
 // Global middleware
 app.use(
   cors({
@@ -39,6 +41,11 @@ app.use("/api/users", userRoutes);
 app.use("/api/student", studentRoutes);
 app.use("/api/messages", messageRoutes);
 
+// ⚠️ Minimal safety check (no logic change)
+if (!MONGO_URI) {
+  console.error("❌ MONGO_URI is not defined in environment variables");
+  process.exit(1);
+}
 
 // Connect to MongoDB, then start the server.
 mongoose
@@ -53,4 +60,3 @@ mongoose
     console.error("❌ Failed to connect to MongoDB", error);
     process.exit(1);
   });
-
